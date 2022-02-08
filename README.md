@@ -94,4 +94,6 @@ It's only funny if we run several MPI instances of `test_cpp.x`, so for example 
 As defined in our `iodef.xml` this should have generated `output_gridA.nc` that contains only one field. This field is kind of stupid, as you might see in `src/test_tp3.cpp`, it's just the rank of the MPI process! So you should see a map with 5 different colors/values.
 
 
- 
+​ 
+--
+/laurent
