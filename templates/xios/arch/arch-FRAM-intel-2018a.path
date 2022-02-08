@@ -1,0 +1,15 @@
+NETCDF_INCDIR=-I/cluster/software/netCDF/4.4.1.1-intel-2018a-HDF5-1.8.19/include
+NETCDF_LIBDIR=-L/cluster/software/netCDF/4.4.1.1-intel-2018a-HDF5-1.8.19/lib64
+NETCDF_LIB="-lnetcdf -L/cluster/software/netCDF-Fortran/4.4.4-intel-2018a-HDF5-1.8.19/lib -lnetcdff"
+
+MPI_INCDIR='$(addprefix -I,$(addsuffix /,${MPI_DIR})include)'
+MPI_LIBDIR='$(addprefix -L,$(addsuffix /,${MPI_DIR})lib)'
+MPI_LIB='$(addprefix -l,mpi)'
+
+HDF5_INCDIR=-I/cluster/software/HDF5/1.8.19-intel-2018a/include
+HDF5_LIBDIR=-L/cluster/software/HDF5/1.8.19-intel-2018a/lib
+HDF5_LIB="-lhdf5_hl -lhdf5 -lhdf5 -lz -lcurl"
+
+OASIS_INCDIR=""
+OASIS_LIBDIR=""
+OASIS_LIB=""

@@ -1,0 +1,20 @@
+## Modules to load:
+##     module load netCDF/4.4.1.1-intel-2018a-HDF5-1.8.19
+##     module load netCDF-Fortran/4.4.4-intel-2018a-HDF5-1.8.19
+##     module load netCDF-C++4/4.3.0-intel-2018a-HDF5-1.8.19
+
+CC  = mpiicc
+CXX = mpiicpc
+FC  = mpiifort
+
+NCDF_DIR = /cluster/software/netCDF/4.4.1.1-intel-2018a-HDF5-1.8.19
+HDF5_DIR = /cluster/software/HDF5/1.8.19-intel-2018a
+XIOS_DIR = /cluster/home/brodeau/src/xios_trunk
+
+CFLAGS   = -std=c++11 -xHost -O2
+CXXFLAGS = -std=c++11 -xHost -O2
+
+# would be `-lgfortran` with gfortran:
+LIB_FC = -lifcore
+
+

@@ -1,0 +1,22 @@
+# FRAM@sigma.no
+
+%CCOMPILER      mpiicpc
+%FCOMPILER      mpiifort
+%LINKER         mpiifort  -nofor-main
+
+%BASE_CFLAGS    -std=c++11 -diag-disable 1125 -diag-disable 279 -D__XIOS_EXCEPTION
+%PROD_CFLAGS    -O3 -g -DBOOST_DISABLE_ASSERTS
+%DEV_CFLAGS     -g -O3 -g -fp-model precise -xHOST
+%DEBUG_CFLAGS   -g 
+
+%BASE_FFLAGS    -D__NONE__
+%PROD_FFLAGS    -O3 -g -r8
+%DEV_FFLAGS     -g -O3 -g -r8
+%DEBUG_FFLAGS   -g 
+
+%BASE_INC       -D__NONE__
+%BASE_LD        -lstdc++
+
+%CPP            mpiicpc -EP
+%FPP            fpp -P
+%MAKE           make

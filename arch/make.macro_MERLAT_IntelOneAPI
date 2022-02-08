@@ -1,0 +1,17 @@
+
+
+CC  = mpiicc
+CXX = mpiicpc
+FC  = mpiifort
+
+NCDF_DIR = /opt/hdf5_netcdf4_intel_par
+HDF5_DIR = /opt/hdf5_netcdf4_intel_par
+XIOS_DIR = /home/laurent/src/xios_trunk
+
+CFLAGS   = -std=c++11 -xHost -O2
+CXXFLAGS = -std=c++11 -xHost -O2
+
+# would be `-lgfortran` with gfortran:
+LIB_FC = -lifcore
+
+
