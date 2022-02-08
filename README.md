@@ -93,7 +93,14 @@ It's only funny if we run several MPI instances of `test_cpp.x`, so for example 
 
 As defined in our `iodef.xml` this should have generated `output_gridA.nc` that contains only one field. This field is kind of stupid, as you might see in `src/test_tp3.cpp`, it's just the rank of the MPI process! So you should see a map with 5 different colors/values.
 
+### Important remarks
 
-​ 
+These are the remarks from Julien, some are a bit obscure for me since I'm not a C++ dude... But I try to translate them to English here:
+
+* when it comes to the management of character string attributes it is preferable to work inside the XML control files
+* the Fortran/C interfacing is based on `char*` and not `string` with a part of the job being done on the Fortran side, which can be problematic in a pure C context.
+* particular attention will have to be paid to the memory organization of fields (column/raw major), it hasn't be done in the present example as the field is set to a constant for each MPI rank.
+
+
 --
 /laurent
