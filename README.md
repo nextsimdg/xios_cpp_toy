@@ -26,7 +26,7 @@ You can now compile `xios`:
 
 `>> ./make_xios --full --prod --arch <MY_ARCH> --netcdf_lib netcdf4_par --job 6`
 
-Note the use of the `--netcdf_lib netcdf4_par` switch that tells we wamt the netCDF parallel support on (counterpart would be the `--netcdf_lib netcdf4_seq`).
+Note the use of the `--netcdf_lib netcdf4_par` switch that tells we want the netCDF parallel support on (counterpart would be the `--netcdf_lib netcdf4_seq`).
 
 Check that the following have been created:
 * `lib/libxios.a`
@@ -74,6 +74,7 @@ That's the simplest XML configuration field one can think of... In real-world GC
 
 This particular "complex" example can be found here in `templates/xios/example_complex_iodef_xml`, it might give you a flavor of the real-world usage of XIOS as opposed to the present tiny example!
 
+The good news is that the XML file design is independent from the XIOS interface used, so all official documentation attached to the Fortran interface is relevant here!
 
 
 ### Compile the test
