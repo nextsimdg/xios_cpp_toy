@@ -20,7 +20,7 @@ In the `arch/` sub-directory of `xios_trunk` you will have to create/adapt 3 fil
 * `arch_<MY_ARCH>.env`
 * `arch_<MY_ARCH>.fcm`
 
-In the case of `fram.sigma2.no`: `<MY_ARCH> = FRAM-intel-2018a`, these files are found here: [`templates/xios/arch/arch_FRAM-intel-2018a.*`](templates/xios/arch)...
+In the case of `fram.sigma2.no`: `<MY_ARCH> = FRAM-intel-2018a`, these files are found here: [`templates/xios/arch/arch_FRAM-intel-2018a.*`](templates/xios/arch) .
 
 You can now compile `xios`:
 
@@ -72,14 +72,14 @@ That's the simplest XML configuration field one can think of... In real-world GC
 
     iodef.xml context_nemo.xml axis_def_nemo.xml domain_def_nemo.xml field_def_nemo-oce.xml file_def_nemo-oce.xml field_def_nemo-ice.xml file_def_nemo-ice.xml grid_def_nemo.xml
 
-This particular "complex" example can be found here in `templates/xios/example_complex_iodef_xml`, it might give you a flavor of the real-world usage of XIOS as opposed to the present tiny example!
+This particular "complex" example can be found here in [`templates/xios/example_complex_iodef_xml/`](./templates/xios/example_complex_iodef_xml), it might give you a flavor of the real-world usage of XIOS as opposed to the present tiny example!
 
 The good news is that the XML file design is independent from the XIOS interface used, so all official documentation attached to the Fortran interface is relevant here!
 
 
 ### Compile the test
  
-Adapt a `make.macro` file to your architecture, templates are found in the `arch/` sub-directory.
+Adapt a `make.macro` file to your architecture, templates are found in the [`arch/`](./arch) sub-directory.
 For FRAM:
 `>> ln -sf arch/make.macro_FRAM-intel-2018a make.macro`
  
