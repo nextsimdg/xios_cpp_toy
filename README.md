@@ -16,9 +16,9 @@ Get the source code:
 `>> cd xios_trunk/`
 
 In the `arch/` sub-directory of `xios_trunk` you will have to create/adapt 3 files according to your local architecture:
-* `<MY_ARCH>.path`
-* `<MY_ARCH>.env`
-* `<MY_ARCH>.fcm`
+* `arch_<MY_ARCH>.path`
+* `arch_<MY_ARCH>.env`
+* `arch_<MY_ARCH>.fcm`
 
 In the case of `fram.sigma2.no`: `<MY_ARCH> = FRAM-intel-2018a`, these files are found here: [`templates/xios/arch/arch_FRAM-intel-2018a.*`](templates/xios/arch)...
 
