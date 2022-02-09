@@ -49,7 +49,7 @@ And of course tutorial, slides, etc found on the following page: `https://forge.
 
 ### What is the "test" made of
 
-The test is a C++ version of one particular assignment that the XIOS teams organize during their "xios training" workshops, the original Fortran-based version can be accessed here:
+The test is a C++ version of one particular assignment that the XIOS team organizes during their "xios training" workshops, the original Fortran-based version can be accessed here:
 `>> svn co http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS/xios_training/hands-on-3`
 
 Julien Derouillat of the XIOS team was kind enough to adapt this test from Fortran to C++ for us.
@@ -62,13 +62,13 @@ That's the one for our test.
 
 #### `src/test_tp3.cpp`
 
-This is our test, written in C++. Julien left all the Fortran parts as comments, they might be useful as all the doc is written for the Fortran interface, so these Fortran lines may help to relate to the relevant info in the doc, or at least understand what is being done!
+This is our test, written in C++. Julien left all the Fortran parts as comments, they might be useful as all the doc is written for the Fortran interface, so these Fortran lines may help to relate to the relevant info in the doc, or at least understand what is being done.
 
 #### `iodef.xml`
 
 That's the XML file that XIOS will read when starting. In this file the domain is defined (like its shape) and also tells XIOS what to save, and potential processing to apply to fields before writing them.
 
-That's the simplest XML configuration field one can think of... In real-world GCMs that use XIOS you would have typically a small `iodef.xml` that sources many others sub XML files as the large amount of request would make `iodef.xml` unbearably big. Example of what I have for a typical NEMO-SI3 simulation:
+That's the simplest XML configuration field one can think of... In real-world GCMs that use XIOS you would have typically a small `iodef.xml` that sources many others sub XML files as the large amount of requests would make `iodef.xml` unbearably big. Example of what I have for a typical NEMO-SI3 simulation:
 
     iodef.xml context_nemo.xml axis_def_nemo.xml domain_def_nemo.xml field_def_nemo-oce.xml file_def_nemo-oce.xml field_def_nemo-ice.xml file_def_nemo-ice.xml grid_def_nemo.xml
 
