@@ -20,7 +20,7 @@ In the `arch/` sub-directory of `xios_trunk` you will have to create/adapt 3 fil
 * `<MY_ARCH>.env`
 * `<MY_ARCH>.fcm`
 
-In the case of `fram.sigma2.no`: `<MY_ARCH> = FRAM-intel-2018a`, these files are found here: [`templates/xios/arch/arch_FRAM-intel-2018a.*`](templates/xios/)...
+In the case of `fram.sigma2.no`: `<MY_ARCH> = FRAM-intel-2018a`, these files are found here: [`templates/xios/arch/arch_FRAM-intel-2018a.*`](templates/xios/arch)...
 
 You can now compile `xios`:
 
