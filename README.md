@@ -4,7 +4,7 @@
 
 Make sure that the `netCDF/HDF5` headers/libraries paths you will be including from/linking to are compiled with PARALLEL support.
 Note: this is very important, as it will allow `XIOS` to generate monolithic output netCDF files despite the fact that it runs on different parallel MPI instances... In case of no parallel support in netCDF4/HDF5, you would write `N` netCDF files, each corresponding to `1/Nth` of your horizontal model domain...
-CPP, and Fortran interfaces of netCDF must be compiled as well.
+C++, and Fortran interfaces of netCDF must be compiled as well.
 
 
 ### Compile XIOS (trunk)
